@@ -1,0 +1,14 @@
+package Inheritance;
+
+public class test_1 {
+	
+	
+	
+
+	public static void main(String[] args) {
+		int d=test.add(12, 0);
+		System.out.println(d);
+
+	}
+
+}

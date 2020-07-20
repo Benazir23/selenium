@@ -1,0 +1,91 @@
+package selenium;
+
+import java.awt.List;
+import java.util.*;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class webappadd {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\DELL\\Downloads\\chromedriver_win32\\chromedriver.exe");	
+	WebDriver driver=new ChromeDriver();
+	driver.navigate().to("http://adactinhotelapp.com/index.php");
+	driver.manage().window().maximize();
+		WebElement login =driver.findElement(By.id("username"));
+		login.sendKeys("nasheen1");
+		WebElement password=driver.findElement(By.id("password"));
+		password.sendKeys("nasheen");
+		WebElement submit=driver.findElement(By.id("login"));
+		submit.click();
+		WebElement location=driver.findElement(By.name("location"));
+		Select loc =new Select(location);
+		Collection<WebElement> list =loc.getOptions();
+		for (WebElement d:list) {
+			System.out.println(d.getText());
+		
+		}
+		
+		
+		WebElement hotels=driver.findElement(By.name("hotels"));
+		Select hotel=new Select(hotels);
+		hotel.selectByValue("Hotel Sunshine");
+		WebElement room=driver.findElement(By.name("room_type"));
+		Select roomtype=new Select(room);
+		roomtype.selectByIndex(4);
+		WebElement no=driver.findElement(By.name("room_nos"));
+		Select roomno =new Select(no);
+		roomno.selectByIndex(3);
+		WebElement datein=driver.findElement(By.name("datepick_in"));
+		datein.sendKeys("27/06/2020");
+		WebElement dateout=driver.findElement(By.name("datepick_out"));
+		dateout.sendKeys("29/06/2020");
+		WebElement a_room=driver.findElement(By.name("adult_room"));
+		Select ad_room=new Select(a_room);
+		ad_room.selectByIndex(1);
+		WebElement c_room=driver.findElement(By.name("child_room"));
+		Select ch_room=new Select(c_room);
+		ch_room.selectByIndex(0);
+		WebElement search=driver.findElement(By.name("Submit"));
+		search.click();
+		WebElement radiobutton=driver.findElement(By.name("radiobutton_0"));
+		radiobutton.click();
+		WebElement cont=driver.findElement(By.name("continue"));
+		cont.click();
+		WebElement fname=driver.findElement(By.name("first_name"));
+		fname.sendKeys("Benazir");
+		WebElement lname=driver.findElement(By.name("last_name"));
+		lname.sendKeys("nasheen");
+		WebElement address=driver.findElement(By.id("address"));
+		address.sendKeys("Chennai");
+		WebElement cardno=driver.findElement(By.name("cc_num"));
+		cardno.sendKeys("1234567891234567");
+		WebElement cardtype=driver.findElement(By.name("cc_type"));
+		Select ctype=new Select(cardtype);
+		ctype.selectByIndex(4);
+		WebElement cmonth=driver.findElement(By.name("cc_exp_month"));
+		Select expmonth=new Select(cmonth);
+		expmonth.selectByIndex(5);
+		WebElement cyear=driver.findElement(By.name("cc_exp_year"));
+		
+		Select expyear=new Select(cyear);
+		expyear.selectByIndex(6);
+	
+		
+		WebElement ccv=driver.findElement(By.name("cc_cvv"));
+		ccv.sendKeys("123");
+		WebElement booknow=driver.findElement(By.name("book_now"));
+		booknow.click();
+		WebElement orderno=driver.findElement(By.id("order_no"));
+		String a=orderno.getAttribute("value");
+		System.out.println(a);
+				
+	}
+
+
+	}
+	
+
+

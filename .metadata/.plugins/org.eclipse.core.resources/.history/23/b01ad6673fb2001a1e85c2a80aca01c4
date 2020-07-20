@@ -1,0 +1,18 @@
+package Inheritance;
+
+public class test2 extends test_1 {
+
+	public int add(int a, int b) {
+		int c = a + b + 20;
+		System.out.println(c);
+		return c;
+
+	}
+
+	public static void main(String[] args) {
+		test_1 obj=new test_1();
+				obj.add(10, 1);
+
+	}
+
+}

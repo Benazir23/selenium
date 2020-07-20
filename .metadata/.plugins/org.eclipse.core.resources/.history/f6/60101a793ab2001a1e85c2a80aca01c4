@@ -1,0 +1,14 @@
+package Inheritance;
+
+public class test_1 {
+	
+	
+	
+
+	public static void main(String[] args) {
+		int d=test.sub(12, 20);
+		System.out.println(d);
+
+	}
+
+}

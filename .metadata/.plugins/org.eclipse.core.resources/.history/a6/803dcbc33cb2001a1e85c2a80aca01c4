@@ -1,0 +1,16 @@
+package Inheritance;
+
+public class test_1 extends test{
+	
+	public int testing() {
+		add(10,20);
+		sub(12,50);
+		return 0;
+	}
+	
+
+	public static void main(String[] args) {
+
+	}
+
+}

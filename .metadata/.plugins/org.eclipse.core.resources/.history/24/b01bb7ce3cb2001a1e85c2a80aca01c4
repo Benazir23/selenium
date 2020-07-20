@@ -1,0 +1,30 @@
+package Inheritance;
+
+public class test {
+	
+	int a=10;
+	int b=20;
+			
+	
+	public static int add(int a, int b ) {
+		 int c=a+b;
+		
+		return c;
+	
+			}
+
+	private static int sub(int a,int b) {
+		
+		System.out.println(a);
+		return b;
+	
+	}
+	static int testmethod() {
+		
+		System.out.println(sub(10,20));
+		return 0;
+		
+	}
+}
+	
+

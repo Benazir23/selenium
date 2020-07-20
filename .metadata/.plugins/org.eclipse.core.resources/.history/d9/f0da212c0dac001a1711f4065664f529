@@ -1,0 +1,20 @@
+package objectbased;
+
+public class loaneligible_1 {
+	
+	
+
+	loaneligible obj = new loaneligible();
+
+	public int sal(int a) {
+		a = obj.Salary();
+		return a;
+	}
+
+	public int limit(int b) {
+		b = obj.card_limit();
+		return b;
+
+	}
+
+}

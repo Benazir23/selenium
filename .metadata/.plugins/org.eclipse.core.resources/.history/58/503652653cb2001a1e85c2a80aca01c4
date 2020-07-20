@@ -1,0 +1,14 @@
+package Inheritance;
+
+public class test_1 {
+	
+	static int d= test.testmethod();
+	
+
+	public static void main(String[] args) {
+		System.out.println(d);
+		
+
+	}
+
+}
